@@ -1,6 +1,10 @@
-# START PROGRAM
+"""
+Caesar Cipher Program
+Encrypts and decrypts messages using a shift value.
+"""
 
-# Create alphabet string
+# Alphabet used for shifting
+alphabet = "abcdefghijklmnopqrstuvwxyz"
 
 # FUNCTION encrypt(message, shift):
 #     create empty result string
