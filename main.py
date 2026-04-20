@@ -20,8 +20,21 @@ def encrypt(message, shift):
             result += char  # keep spaces/punctuation
 
     return result
-# FUNCTION decrypt(message, shift):
-#     create empty result string
+
+# Function to decrypt a message
+def decrypt(message, shift):
+    result = ""
+
+    for char in message:# creates an empty result string
+        if char in alphabet: # loop through each character 
+            index = alphabet.index(char) # find position   
+            new_index = (index - shift) % 26  # shift backward + wrap around
+            result += alphabet[new_index] # add new letter to result
+        else:
+            result += char # keep spaces/punctuations
+
+    return result
+
 #     loop through each character:
 #         if character is a letter:
 #             find position
