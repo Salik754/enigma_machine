@@ -6,18 +6,20 @@ Encrypts and decrypts messages using a shift value.
 # Alphabet used for shifting
 alphabet = "abcdefghijklmnopqrstuvwxyz"
 
-# FUNCTION encrypt(message, shift):
-#     create empty result string
-#     loop through each character in message:
-#         if character is a letter:
-#             find its position in alphabet
-#             shift position forward
-#             wrap around if needed
-#             add new letter to result
-#         else:
-#             keep character the same
-#     return result
+# Function to encrypt a message
+def encrypt(message, shift):
+    result = ""# creates an empty result string
 
+
+    for char in message: # loop through each character in message
+        if char in alphabet: # if character is a letter
+            index = alphabet.index(char)  # find position
+            new_index = (index + shift) % 26  # shift forward + wrap around
+            result += alphabet[new_index] # add new letter to result
+        else:
+            result += char  # keep spaces/punctuation
+
+    return result
 # FUNCTION decrypt(message, shift):
 #     create empty result string
 #     loop through each character:
