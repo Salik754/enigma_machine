@@ -49,6 +49,16 @@ def decrypt(message, shift):
 #     ask user for "e" or "d"
 #     validate input
 #     return choice
+# Function to get valid choice
+def get_choice():
+    while True:
+        choice = input("Encrypt or Decrypt? (e/d): ").strip().lower()
+        if choice == "e" or choice == "d": # ask the user for "e" or "d"
+            return choice # return the valid choice, also stops the loop
+        else:
+            print("Invalid input. Enter 'e' or 'd'.") #if the choice is invalid, print this message
+
+
 
 # MAIN:
 #     greet user
