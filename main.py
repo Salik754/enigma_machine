@@ -35,20 +35,7 @@ def decrypt(message, shift):
 
     return result
 
-#     loop through each character:
-#         if character is a letter:
-#             find position
-#             shift backward
-#             wrap around
-#             add new letter
-#         else:
-#             keep character the same
-#     return result
 
-# FUNCTION get_choice():
-#     ask user for "e" or "d"
-#     validate input
-#     return choice
 # Function to get valid choice
 def get_choice():
     while True:
