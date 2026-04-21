@@ -55,5 +55,20 @@ def main():
         choice = get_choice()
         message = input("Enter your message: ").strip().lower()
         
+         # validate shift
+        while True:
+            try:
+                shift = int(input("Enter shift number: ").strip())
+                break
+            except ValueError:
+                print("Please enter a valid number.")
+
+        if choice == "e":
+            result = encrypt(message, shift)
+            print(f"Encrypted message: {result}")
+        else:
+            result = decrypt(message, shift)
+            print(f"Decrypted message: {result}")
+
 
 # END PROGRAM
