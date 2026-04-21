@@ -47,20 +47,13 @@ def get_choice():
 
 
 
-# MAIN:
-#     greet user
-#     loop forever:
-#         get choice
-#         get message
-#         clean message
-#         get shift number
-#         if choice is "e":
-#             call encrypt
-#         else:
-#             call decrypt
-#         display result
-#         ask if user wants to continue
-#         if no:
-#             exit loop
+# Main program
+def main():
+    print("Welcome to the Caesar Cipher Program!\n")
+
+    while True:
+        choice = get_choice()
+        message = input("Enter your message: ").strip().lower()
+        
 
 # END PROGRAM
