@@ -74,5 +74,6 @@ def main():
         if again != "y":
             print("Goodbye!")
             break
-
-# END PROGRAM
+# Run program
+if __name__ == "__main__":
+    main()
