@@ -57,23 +57,23 @@ def main():
         
          # validate shift
         while True:
-            try:
-                shift = int(input("Enter shift number: ").strip())
-                break
+            try: # attempt to convert shift to an integer
+                shift = int(input("Enter shift number: ").strip()) # get shift number from user
+                break # exit the loop if conversion is successful
             except ValueError:
-                print("Please enter a valid number.")
+                print("Please enter a valid number.") # if conversion fails, print error message
 
         if choice == "e":
-            result = encrypt(message, shift)
-            print(f"Encrypted message: {result}")
+            result = encrypt(message, shift) # call encrypt function
+            print(f"Encrypted message: {result}") # print the encrypted result
         else:
-            result = decrypt(message, shift)
-            print(f"Decrypted message: {result}")
+            result = decrypt(message, shift) # call decrypt function
+            print(f"Decrypted message: {result}") # print the decrypted result
 
         again = input("Run again? (y/n): ").strip().lower()
-        if again != "y":
+        if again != "y": # if user doesn't want to continue
             print("Goodbye!")
-            break
+            break # stop the main loop
 # Run program
 if __name__ == "__main__":
     main()
