@@ -70,5 +70,9 @@ def main():
             result = decrypt(message, shift)
             print(f"Decrypted message: {result}")
 
+        again = input("Run again? (y/n): ").strip().lower()
+        if again != "y":
+            print("Goodbye!")
+            break
 
 # END PROGRAM
