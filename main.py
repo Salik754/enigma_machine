@@ -23,10 +23,10 @@ def encrypt(message, shift):
 
 # Function to decrypt a message
 def decrypt(message, shift):
-    result = ""
+    result = ""# creates an empty result string
 
-    for char in message:# creates an empty result string
-        if char in alphabet: # loop through each character 
+    for char in message:# loop through each character 
+        if char in alphabet: # if character is a letter
             index = alphabet.index(char) # find position   
             new_index = (index - shift) % 26  # shift backward + wrap around
             result += alphabet[new_index] # add new letter to result
